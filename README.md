@@ -8,7 +8,7 @@ via
 * Monnify
 
 ### How to Use
-You can use jsdeliver to allow github to serve the sdk in to your project 
+You can use jsdeliver to allow github to serve they sdk in your project 
 
 ### Inline sample
 ```html
@@ -33,21 +33,35 @@ You can use jsdeliver to allow github to serve the sdk in to your project
                 customerNumber: '',
                 invoiceNum: '',
                 receiverXendCode: '',
-                customerXendCode: '',     
+                customerXendCode: '',   
+                onXendComplete: function(response){
+                    // Implement what should happen when the function has been completed
+                    console.log(response)
+                },
+                onclose: function(){
+                    //Implement what should happen when the modal is closed here
+                   alert('window closed')
+                }  
             }
         )
     } 
+
+    
 </script> 
 ```
+### Demo
+You can take a look at what this looks like here [demo](https://ada-h.github.io/demo)
 
 ### Requirements
- * {Number} amount Amount user wants to pay.
- * {String} customerName Customer's name.
- * {String} receiverName Receiver's name.
- * {String} image Receiver's image.
- * {String} customerEmail Customer's email.
- * {String} paymentPurpose Purpose can be 'Subscription' or 'MerchantBranch' or MerchantCustomer' or 'Invoice'.
- * {String} customerNumber Customer's phone number
- * {String} invoiceNum Customer's invoice number if payment is via invoice, otherwise, return empty string
- * {String} receiverXendCode Receiver's Xend Code
- * {String} customerXendCode Customer's Xend Code
+ * {Number} amount - Amount user wants to pay in kobo.
+ * {String} customerName -  Customer's name.
+ * {String} receiverName -  Receiver's name.
+ * {String} image - Receiver's image.
+ * {String} customerEmail - Customer's email.
+ * {String} paymentPurpose - Purpose can be 'Subscription' or 'MerchantBranch' or MerchantCustomer' or 'Invoice'.
+ * {String} customerNumber - Customer's phone number
+ * {String} invoiceNum  - Customer's invoice number if payment is via invoice, otherwise, return empty string
+ * {String} receiverXendCode - Receiver's Xend Code
+ * {String} customerXendCode - Customer's Xend Code
+ * {Function} onXendComplete - A function that allows you to perform an action when the transaction is closed
+ * {Function} onclose - A function that is called when the payment sdk is closed before the transaction is completed
