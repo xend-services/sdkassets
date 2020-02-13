@@ -13,7 +13,7 @@ You can use jsdeliver to allow github to serve they sdk in your project
 ### Inline sample
 ```html
 <form >
-    <script src="https://cdn.jsdelivr.net/gh/ada-h/xendSdk/payxend.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/xend-services/sdkassets/payxend.min.js"></script>
     <button type="button" onclick="openXendSdk()"> Pay </button> 
 </form> 
 ```
