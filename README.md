@@ -17,6 +17,9 @@ You can use jsdeliver to allow github to serve they sdk in your project
     <button type="button" onclick="openXendSdk()"> Pay </button> 
 </form> 
 ```
+### Demo
+
+You can take a look at what this looks like here [demo](https://ada-h.github.io/demo)
 
 ``` javascript
 <script>
@@ -28,6 +31,7 @@ You can use jsdeliver to allow github to serve they sdk in your project
                 customerName: '',
                 receiverName: '',
                 image: '',
+                referenceToken: '',
                 customerEmail: '',
                 paymentPurpose: '',
                 customerNumber: '',
@@ -49,14 +53,13 @@ You can use jsdeliver to allow github to serve they sdk in your project
     
 </script> 
 ```
-### Demo
-You can take a look at what this looks like here [demo](https://ada-h.github.io/demo)
 
 ### Requirements
  * {Number} amount - Amount user wants to pay in kobo.
  * {String} customerName -  Customer's name.
  * {String} receiverName -  Receiver's name.
  * {String} image - Receiver's image.
+ * {String} referenceToken - refrence token for when paying for subscription
  * {String} customerEmail - Customer's email.
  * {String} paymentPurpose - Purpose can be 'Subscription' or 'MerchantBranch' or MerchantCustomer' or 'Invoice'.
  * {String} customerNumber - Customer's phone number
